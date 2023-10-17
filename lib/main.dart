@@ -116,6 +116,8 @@ class FlutterDemoState extends State<FlutterDemo> {
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
@@ -156,9 +158,9 @@ class FlutterDemoState extends State<FlutterDemo> {
                     return ListTile(
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(30)),
-                      tileColor: Theme.of(context).colorScheme.primary,
-                      textColor: Theme.of(context).colorScheme.onPrimary,
-                      iconColor: Theme.of(context).colorScheme.onPrimary,
+                      tileColor: theme.colorScheme.primary,
+                      textColor: theme.colorScheme.onPrimary,
+                      iconColor: theme.colorScheme.onPrimary,
                       leading: const Icon(Icons.restaurant),
                       title: Text(data.values.toList()[1][index]),
                       trailing: Text(""),
