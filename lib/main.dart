@@ -22,6 +22,18 @@ void main() async {
   runApp(
     MaterialApp(
       title: 'Reading and Writing Files',
+      theme: ThemeData(
+        useMaterial3: true,
+        colorScheme: ColorScheme.fromSeed(
+            seedColor: Color.fromARGB(
+                255, 90, 166, 252)), //Color.fromARGB(255, 255, 72, 0)),
+        // You can set the theme of listTile from here but it cannot relate to the app theme
+        //listTileTheme: ListTileThemeData(
+        //  tileColor: const Color.fromARGB(255, 255, 228, 228),
+        //  textColor: Colors.white,
+        //  iconColor: Colors.white,
+        //),
+      ),
       home: FlutterDemo(storage: FileStorage()),
     ),
   );
@@ -39,7 +51,7 @@ class FileStorage {
 
       print(response.statusCode);
 
-      Map<String, dynamic> jsonResponse = {};
+      Map<dynamic, dynamic> jsonResponse = {};
 
       var itemCount = 0;
       if (response.statusCode == 200) {
@@ -76,8 +88,8 @@ class FlutterDemoState extends State<FlutterDemo> {
   int counter = 0;
   //int data = 1;
   var data = {};
-  var objects = [];
-  var itemCount = 0;
+  List objects = [];
+  int itemCount = 0;
 
   @override
   void initState() {
@@ -104,58 +116,81 @@ class FlutterDemoState extends State<FlutterDemo> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Detected Objects'),
-      ),
-      body: Center(
-        child: SingleChildScrollView(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: <Widget>[
-              ClipRRect(
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(8.0),
-                  topRight: Radius.circular(8.0),
-                ),
-                child: Image.network(
-                  'https://raw.githubusercontent.com/darkquesh/s-f/main/orange_detic1.jpg',
-                  fit: BoxFit.contain, // Adjust the width as needed
-                  width: 200,
-                  height: 200,
-                ),
-              ),
-              SizedBox(height: 16), // Add spacing between image and text
-              Text(
-                'Detected $itemCount objects:\n'
-                '$objects',
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ],
-          ),
+    return SafeArea(
+      child: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+          title: const Text('Detected Objects'),
         ),
-        //   child: Text('Objects:\n'
-        //       '$data'
-        //       //'Button tapped $counter time${counter == 1 ? '' : 's'}.',
-        //       ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          NotificationService().showNotification(
-            title:
-                'Attention: Your ${objects[0]} are plotting a sticky revolution',
-            body:
-                'Either make ${objects[0]} bread or face the consequences of mushy anarchy!',
-          );
-          print('Button pressed!');
-        },
-        //onPressed: _incrementCounter,
-        tooltip: 'Send notification',
-        child: const Icon(Icons.rocket),
+        body: Center(
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
+                ClipRRect(
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(8.0),
+                    topRight: Radius.circular(8.0),
+                  ),
+                  child: Image.network(
+                    'https://raw.githubusercontent.com/darkquesh/s-f/main/orange_detic1.jpg',
+                    fit: BoxFit.contain, // Adjust the width as needed
+                    width: 200,
+                    height: 200,
+                  ),
+                ),
+                SizedBox(height: 16), // Add spacing between image and text
+                Text(
+                  'Detected $itemCount objects:\n',
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                ListView.separated(
+                  shrinkWrap: true,
+                  padding: const EdgeInsets.all(10),
+                  itemCount: data.length,
+                  itemBuilder: (context, index) {
+                    return ListTile(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30)),
+                      tileColor: Theme.of(context).colorScheme.primary,
+                      textColor: Theme.of(context).colorScheme.onPrimary,
+                      iconColor: Theme.of(context).colorScheme.onPrimary,
+                      leading: const Icon(Icons.restaurant),
+                      title: Text(data.values.toList()[1][index]),
+                      trailing: Text(""),
+                    );
+                    //child: Text(data.values.toList()[1][index]));
+                  },
+                  separatorBuilder: (context, index) {
+                    return Divider();
+                  },
+                ),
+              ],
+            ),
+          ),
+          //   child: Text('Objects:\n'
+          //       '$data'
+          //       //'Button tapped $counter time${counter == 1 ? '' : 's'}.',
+          //       ),
+        ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            NotificationService().showNotification(
+              title:
+                  'Attention: Your ${objects[0]} are plotting a sticky revolution',
+              body:
+                  'Either make ${objects[0]} bread or face the consequences of mushy anarchy!',
+            );
+            print('Button pressed!');
+          },
+          //onPressed: _incrementCounter,
+          tooltip: 'Send notification',
+          child: const Icon(Icons.rocket),
+        ),
       ),
     );
   }
