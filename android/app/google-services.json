@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "814631717041",
+    "project_id": "pushnotification-4f836",
+    "storage_bucket": "pushnotification-4f836.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:814631717041:android:e78162fe7f9da541703a90",
+        "android_client_info": {
+          "package_name": "com.example.detic_app2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyClbogxdCgdbTahbq5mrjBOZDxtPYfgeww"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

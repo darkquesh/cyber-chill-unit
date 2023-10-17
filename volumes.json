@@ -1,0 +1,737 @@
+{
+  "kind": "books#volumes",
+  "totalItems": 677,
+  "items": [
+    {
+      "kind": "books#volume",
+      "id": "oggEAAAAMBAJ",
+      "etag": "i7iWLv0X2ZE",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/oggEAAAAMBAJ",
+      "volumeInfo": {
+        "title": "Billboard",
+        "publishedDate": "1999-09-11",
+        "description": "In its 114th year, Billboard remains the world's premier weekly music publication and a diverse digital, events, brand, content and data licensing platform. Billboard publishes the most trusted charts and offers unrivaled reporting about the latest music, video, gaming, media, digital and mobile entertainment issues and trends.",
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 130,
+        "printType": "MAGAZINE",
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.0.1.0.preview.1",
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=oggEAAAAMBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=oggEAAAAMBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com.tr/books?id=oggEAAAAMBAJ&printsec=frontcover&dq=https&hl=&cd=1&source=gbs_api",
+        "infoLink": "http://books.google.com.tr/books?id=oggEAAAAMBAJ&dq=https&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Billboard.html?hl=&id=oggEAAAAMBAJ"
+      },
+      "saleInfo": {
+        "country": "TR",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "TR",
+        "viewability": "ALL_PAGES",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=oggEAAAAMBAJ&hl=&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "In its 114th year, Billboard remains the world&#39;s premier weekly music publication and a diverse digital, events, brand, content and data licensing platform."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "CYe2DwAAQBAJ",
+      "etag": "2FtmMnIpm1M",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/CYe2DwAAQBAJ",
+      "volumeInfo": {
+        "title": "Off the Back of a Truck",
+        "subtitle": "Unofficial Contraband for the Sopranos Fan",
+        "authors": [
+          "Nick Braccia"
+        ],
+        "publisher": "Simon and Schuster",
+        "publishedDate": "2020-12-01",
+        "description": "Unleash your inner Soprano and relive all your favorite moments with this companion guide to the award-winning television series The Sopranos. We all know and love The Sopranos, one of the most important television dramas to ever hit the small screen, having run for six seasons on HBO. The story of the Italian-American mobster Tony Soprano balancing his family life with his role as the leader of a criminal organization pioneered decades of genre-bending “peak TV.” Now, Off the Back of a Truck takes you one step further into the world of Tony Soprano and his families, offering an Italian potluck of fresh and fun takes that any true fan can get lost in for hours. Off the Back of a Truck includes: -New looks at everyone’s favorite episodes, scenes, and characters -All 92 deaths analyzed, evaluated, and ranked -An investigation of true crimes behind the families’ schemes -An exploration of movies and shows that inspired The Sopranos -Reflections on the use of music, food, and fashion from writers who are also huge fans -A provocative conversation about what happens in the controversial ending This book takes you on a journey through the six seasons you have watched time and time again—but it's organized so you can dip in at any time, at any place. Roam around as though you’re in Tony’s backyard for a BBQ...",
+        "industryIdentifiers": [
+          {
+            "type": "ISBN_13",
+            "identifier": "9781982139087"
+          },
+          {
+            "type": "ISBN_10",
+            "identifier": "1982139080"
+          }
+        ],
+        "readingModes": {
+          "text": true,
+          "image": false
+        },
+        "pageCount": 368,
+        "printType": "BOOK",
+        "categories": [
+          "Performing Arts"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": true,
+        "contentVersion": "1.3.3.0.preview.2",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=CYe2DwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=CYe2DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com.tr/books?id=CYe2DwAAQBAJ&pg=PT378&dq=https&hl=&cd=2&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=CYe2DwAAQBAJ&source=gbs_api",
+        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=CYe2DwAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "TR",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 493.3,
+          "currencyCode": "TRY"
+        },
+        "retailPrice": {
+          "amount": 345.31,
+          "currencyCode": "TRY"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=CYe2DwAAQBAJ&rdid=book-CYe2DwAAQBAJ&rdot=1&source=gbs_api",
+        "offers": [
+          {
+            "finskyOfferType": 1,
+            "listPrice": {
+              "amountInMicros": 493300000,
+              "currencyCode": "TRY"
+            },
+            "retailPrice": {
+              "amountInMicros": 345310000,
+              "currencyCode": "TRY"
+            }
+          }
+        ]
+      },
+      "accessInfo": {
+        "country": "TR",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+        "epub": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.com.tr/books/download/Off_the_Back_of_a_Truck-sample-epub.acsm?id=CYe2DwAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=CYe2DwAAQBAJ&hl=&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "... \u003cb\u003ehttps\u003c/b\u003e://www.nj.gov/sci/pdf/Press/SCIPress ReleaseDirt.pdf . 5. Albert Samaha , “ Bad Rabbi : Tales of Extortion and Torture Depict a Divorce Broker&#39;s Brutal Grip on the Orthodox Community , ” Village Voice , December 4 , 2013 , \u003cb\u003ehttps\u003c/b\u003e&nbsp;..."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "TF2dEAAAQBAJ",
+      "etag": "QJlJBxne/1Q",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/TF2dEAAAQBAJ",
+      "volumeInfo": {
+        "title": "Hoş Geldin Ramazan, Sayı 9",
+        "authors": [
+          "Tevhid Çocuk Dergisi"
+        ],
+        "publisher": "Tevhid Çocuk Dergisi",
+        "publishedDate": "2022-04-15",
+        "description": "Tevhid Çocuk Dergisi İslami Eğitim Dergisi “Tağuta kulluk etmekten kaçınıp Allah’a yönelenlere müjde vardır. Kullarımı müjdele.” (39/Zümer, 17) Küfrün Karanlıklarından, Vahyin Aydınlığına… Tevhid Dersleri Kanalı İçin; https://bit.ly/2Xx0vnW Ebu Hanzala Hoca Kanalı için; https://bit.ly/2XzV7jZ Tevhid Meali İçin: https://tevhidmeali.com/ Bütün Videoları İzlemek İçin; https://tevhiddersleri.org/ Dergilerimiz ve Kitaplarımıza Ulaşmak İçin: http://tevhiddergisi.org/ Şer’i sorularınızı tevhidsoru@gmail.com mail adresi üzerinden sorabilirsiniz.",
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 76,
+        "printType": "BOOK",
+        "categories": [
+          "Education"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": true,
+        "contentVersion": "0.0.1.0.preview.1",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=TF2dEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=TF2dEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "tr",
+        "previewLink": "http://books.google.com.tr/books?id=TF2dEAAAQBAJ&printsec=frontcover&dq=https&hl=&cd=3&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=TF2dEAAAQBAJ&source=gbs_api",
+        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=TF2dEAAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "TR",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 0,
+          "currencyCode": "TRY"
+        },
+        "retailPrice": {
+          "amount": 0,
+          "currencyCode": "TRY"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=TF2dEAAAQBAJ&rdid=book-TF2dEAAAQBAJ&rdot=1&source=gbs_api"
+      },
+      "accessInfo": {
+        "country": "TR",
+        "viewability": "ALL_PAGES",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": true
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=TF2dEAAAQBAJ&hl=&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "Tevhid Çocuk Dergisi İslami Eğitim Dergisi “Tağuta kulluk etmekten kaçınıp Allah’a yönelenlere müjde vardır."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "ORadEAAAQBAJ",
+      "etag": "zmdwvkKjWYE",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/ORadEAAAQBAJ",
+      "volumeInfo": {
+        "title": "Hafız Adaylarına, Sayı 89",
+        "authors": [
+          "Tevhid Dergisi"
+        ],
+        "publisher": "Tevhid Dergisi",
+        "publishedDate": "2020-01-15",
+        "description": "Tevhid Dergisi Aylık İslami Eğitim Dergisi “Tağuta kulluk etmekten kaçınıp Allah’a yönelenlere müjde vardır. Kullarımı müjdele.” (39/Zümer, 17) Küfrün Karanlıklarından, Vahyin Aydınlığına… Tevhid Dersleri Kanalı İçin; https://bit.ly/2Xx0vnW Ebu Hanzala Hoca Kanalı için; https://bit.ly/2XzV7jZ Tevhid Meali İçin: https://tevhidmeali.com/ Bütün Videoları İzlemek İçin; https://tevhiddersleri.org/ Dergilerimiz ve Kitaplarımıza Ulaşmak İçin: http://tevhiddergisi.org/ Şer’i sorularınızı tevhidsoru@gmail.com mail adresi üzerinden sorabilirsiniz.",
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 60,
+        "printType": "BOOK",
+        "categories": [
+          "Religion"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": true,
+        "contentVersion": "preview-1.0.0",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=ORadEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=ORadEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "tr",
+        "previewLink": "http://books.google.com.tr/books?id=ORadEAAAQBAJ&printsec=frontcover&dq=https&hl=&cd=4&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=ORadEAAAQBAJ&source=gbs_api",
+        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=ORadEAAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "TR",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 0,
+          "currencyCode": "TRY"
+        },
+        "retailPrice": {
+          "amount": 0,
+          "currencyCode": "TRY"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=ORadEAAAQBAJ&rdid=book-ORadEAAAQBAJ&rdot=1&source=gbs_api"
+      },
+      "accessInfo": {
+        "country": "TR",
+        "viewability": "ALL_PAGES",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": true
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=ORadEAAAQBAJ&hl=&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "Tevhid Dergisi Aylık İslami Eğitim Dergisi “Tağuta kulluk etmekten kaçınıp Allah’a yönelenlere müjde vardır."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "JSSdEAAAQBAJ",
+      "etag": "FaGxG5u4Af0",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/JSSdEAAAQBAJ",
+      "volumeInfo": {
+        "title": "Kulluk Bedel Ödemektir, Sayı 97",
+        "authors": [
+          "Tevhid Dergisi"
+        ],
+        "publisher": "Tevhid Dergisi",
+        "publishedDate": "2020-11-15",
+        "description": "Tevhid Dergisi Aylık İslami Eğitim Dergisi “Tağuta kulluk etmekten kaçınıp Allah’a yönelenlere müjde vardır. Kullarımı müjdele.” (39/Zümer, 17) Küfrün Karanlıklarından, Vahyin Aydınlığına… Tevhid Dersleri Kanalı İçin; https://bit.ly/2Xx0vnW Ebu Hanzala Hoca Kanalı için; https://bit.ly/2XzV7jZ Tevhid Meali İçin: https://tevhidmeali.com/ Bütün Videoları İzlemek İçin; https://tevhiddersleri.org/ Dergilerimiz ve Kitaplarımıza Ulaşmak İçin: http://tevhiddergisi.org/ Şer’i sorularınızı tevhidsoru@gmail.com mail adresi üzerinden sorabilirsiniz.",
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 68,
+        "printType": "BOOK",
+        "categories": [
+          "Religion"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": true,
+        "contentVersion": "preview-1.0.0",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=JSSdEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=JSSdEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "tr",
+        "previewLink": "http://books.google.com.tr/books?id=JSSdEAAAQBAJ&printsec=frontcover&dq=https&hl=&cd=5&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=JSSdEAAAQBAJ&source=gbs_api",
+        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=JSSdEAAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "TR",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 0,
+          "currencyCode": "TRY"
+        },
+        "retailPrice": {
+          "amount": 0,
+          "currencyCode": "TRY"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=JSSdEAAAQBAJ&rdid=book-JSSdEAAAQBAJ&rdot=1&source=gbs_api"
+      },
+      "accessInfo": {
+        "country": "TR",
+        "viewability": "ALL_PAGES",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": true
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=JSSdEAAAQBAJ&hl=&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "Tevhid Dergisi Aylık İslami Eğitim Dergisi “Tağuta kulluk etmekten kaçınıp Allah’a yönelenlere müjde vardır."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "mDudEAAAQBAJ",
+      "etag": "ONP+ar1nxTY",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/mDudEAAAQBAJ",
+      "volumeInfo": {
+        "title": "Rahmân'ın Kulları, Sayı 115",
+        "authors": [
+          "Tevhid Dergisi"
+        ],
+        "publisher": "Tevhid Dergisi",
+        "publishedDate": "2022-07-15",
+        "description": "Tevhid Dergisi Aylık İslami Eğitim Dergisi “Tağuta kulluk etmekten kaçınıp Allah’a yönelenlere müjde vardır. Kullarımı müjdele.” (39/Zümer, 17) Küfrün Karanlıklarından, Vahyin Aydınlığına… Tevhid Dersleri Kanalı İçin; https://bit.ly/2Xx0vnW Ebu Hanzala Hoca Kanalı için; https://bit.ly/2XzV7jZ Tevhid Meali İçin: https://tevhidmeali.com/ Bütün Videoları İzlemek İçin; https://tevhiddersleri.org/ Dergilerimiz ve Kitaplarımıza Ulaşmak İçin: http://tevhiddergisi.org/ Şer’i sorularınızı tevhidsoru@gmail.com mail adresi üzerinden sorabilirsiniz.",
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 52,
+        "printType": "BOOK",
+        "categories": [
+          "Religion"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": true,
+        "contentVersion": "preview-1.0.0",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=mDudEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=mDudEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "tr",
+        "previewLink": "http://books.google.com.tr/books?id=mDudEAAAQBAJ&printsec=frontcover&dq=https&hl=&cd=6&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=mDudEAAAQBAJ&source=gbs_api",
+        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=mDudEAAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "TR",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 0,
+          "currencyCode": "TRY"
+        },
+        "retailPrice": {
+          "amount": 0,
+          "currencyCode": "TRY"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=mDudEAAAQBAJ&rdid=book-mDudEAAAQBAJ&rdot=1&source=gbs_api"
+      },
+      "accessInfo": {
+        "country": "TR",
+        "viewability": "ALL_PAGES",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": true
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=mDudEAAAQBAJ&hl=&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "Tevhid Dergisi Aylık İslami Eğitim Dergisi “Tağuta kulluk etmekten kaçınıp Allah’a yönelenlere müjde vardır."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "GR7dDwAAQBAJ",
+      "etag": "FfWyhkPsub8",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/GR7dDwAAQBAJ",
+      "volumeInfo": {
+        "title": "Choice Hacking",
+        "subtitle": "How to use psychology and behavioral science to create an experience that sings",
+        "authors": [
+          "Jennifer L. Clinehens"
+        ],
+        "publisher": "Jennifer L. Clinehens",
+        "publishedDate": "2020-06-16",
+        "description": "What if you could use Nobel prize-winning science to predict the choices your customers will make? Customer and user behaviors can seem irrational. Shaped by mental shortcuts and psychological biases, their actions often appear random on the surface. In Choice Hacking, we'll learn to predict these irrational behaviors and apply the science of decision-making to create unforgettable customer experiences. Discover a framework for designing experiences that doesn't just show you what principles to apply, but introduces a new way of thinking about customer behavior. You'll finish Choice Hacking feeling confident and ready to transform your experience with science. In Choice Hacking, you'll discover: - How to make sure your customer experience is designed for what people do (not what they say they'll do) - How to increase the odds that customers will make the \"right choice\" in any environment - How to design user experiences that drive action and engagement - How to create retail experiences that persuade and drive brand love - How brands like Uber, Netflix, Disney, and Starbucks apply these principles in their customer and user experiences Additional resources included with the book: - Access to free video Companion Course - Access to exclusive free resources, tools, examples, and use cases online Who will benefit from reading Choice Hacking? This book was written for anyone who wants to better understand customer and user decision-making. Whether you're a consultant, strategist, digital marketer, small business owner, writer, user experience designer, student, manager, or organizational leader, you will find immediate value in Choice Hacking. About the Author Jennifer Clinehens is currently Head of Experience at a major global experience agency. She holds a Master's degree in Brand Management as well as an MBA from Emory University's Goizueta School. Ms. Clinehens has client-side and consulting experience working for brands like AT&T, McDonald's, and Adidas, and she's helped shape customer experiences across the globe. A recognized authority in marketing and customer experience, she is also the author of CX That Sings: An Introduction To Customer Journey Mapping. To learn more about this book or contact the author, please visit ChoiceHacking.com",
+        "readingModes": {
+          "text": true,
+          "image": true
+        },
+        "pageCount": 219,
+        "printType": "BOOK",
+        "categories": [
+          "Business & Economics"
+        ],
+        "averageRating": 2,
+        "ratingsCount": 1,
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": true,
+        "contentVersion": "1.5.4.0.preview.3",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=GR7dDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=GR7dDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com.tr/books?id=GR7dDwAAQBAJ&pg=PT219&dq=https&hl=&cd=7&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=GR7dDwAAQBAJ&source=gbs_api",
+        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=GR7dDwAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "TR",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 156.23,
+          "currencyCode": "TRY"
+        },
+        "retailPrice": {
+          "amount": 156.23,
+          "currencyCode": "TRY"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=GR7dDwAAQBAJ&rdid=book-GR7dDwAAQBAJ&rdot=1&source=gbs_api",
+        "offers": [
+          {
+            "finskyOfferType": 1,
+            "listPrice": {
+              "amountInMicros": 156230000,
+              "currencyCode": "TRY"
+            },
+            "retailPrice": {
+              "amountInMicros": 156230000,
+              "currencyCode": "TRY"
+            }
+          }
+        ]
+      },
+      "accessInfo": {
+        "country": "TR",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.com.tr/books/download/Choice_Hacking-sample-epub.acsm?id=GR7dDwAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.com.tr/books/download/Choice_Hacking-sample-pdf.acsm?id=GR7dDwAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=GR7dDwAAQBAJ&hl=&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "... \u003cb\u003ehttps\u003c/b\u003e:// digital.hbs.edu/platform-rctom/submission/open-innovation-at-lego-theback-beat-in-everything-is-awesome/. 6 “The &#39;IKEA Effect&#39;: When Labor Leads to Love.” HBS Working Knowledge, 13 Apr. 2011, \u003cb\u003ehttps\u003c/b\u003e://hbswk.hbs.edu/item/the-ikea&nbsp;..."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "rRAEAAAAMBAJ",
+      "etag": "ivJq533LlNM",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/rRAEAAAAMBAJ",
+      "volumeInfo": {
+        "title": "Billboard",
+        "publishedDate": "2000-12-09",
+        "description": "In its 114th year, Billboard remains the world's premier weekly music publication and a diverse digital, events, brand, content and data licensing platform. Billboard publishes the most trusted charts and offers unrivaled reporting about the latest music, video, gaming, media, digital and mobile entertainment issues and trends.",
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 124,
+        "printType": "MAGAZINE",
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "0.1.1.0.preview.1",
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=rRAEAAAAMBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=rRAEAAAAMBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com.tr/books?id=rRAEAAAAMBAJ&printsec=frontcover&dq=https&hl=&cd=8&source=gbs_api",
+        "infoLink": "http://books.google.com.tr/books?id=rRAEAAAAMBAJ&dq=https&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/Billboard.html?hl=&id=rRAEAAAAMBAJ"
+      },
+      "saleInfo": {
+        "country": "TR",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "TR",
+        "viewability": "ALL_PAGES",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": false
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=rRAEAAAAMBAJ&hl=&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "In its 114th year, Billboard remains the world&#39;s premier weekly music publication and a diverse digital, events, brand, content and data licensing platform."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "cy73DwAAQBAJ",
+      "etag": "yV3ZGwxLbtw",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/cy73DwAAQBAJ",
+      "volumeInfo": {
+        "title": "List of English-translated Chinese standards （HAD-HAF）",
+        "subtitle": "English-translated Chinese standards",
+        "authors": [
+          "https://www.codeofchina.com"
+        ],
+        "publisher": "https://www.codeofchina.com",
+        "description": "HTTPS://WWW.CODEOFCHINA.COM EMAIL:COC@CODEOFCHINA.COM \"Codeofchina Inc., a part of TransForyou (Beijing) Translation Co., Ltd., is a professional Chinese code translator in China. Now, Codeofchina Inc. is running a professional Chinese code website, www.codeofchina.com. Through this website, Codeofchina Inc. provides English-translated Chinese codes to clients worldwide. About TransForyou TransForyou (Beijing) Translation Co., Ltd., established in 2003, is a reliable language service provider for clients at home and abroad. Since our establishment, TransForyou has been aiming to build up a translation brand with our professional dedicated service. Currently, TransForyou is the director of China Association of Engineering Construction Standardization (CECS); the committeeman of Localization Service Committee / Translators Association of China (TAC) and the member of Boya Translation Culture Salon (BTCS); and the field study center of the University of the University of International Business & Economics (UIBE) and Hebei University (HU). In 2016, TransForyou ranked 27th among Asian Language Service Providers by Common Sense Advisory. \"",
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 8,
+        "printType": "BOOK",
+        "categories": [
+          "Architecture"
+        ],
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "preview-1.0.0",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=cy73DwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=cy73DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com.tr/books?id=cy73DwAAQBAJ&printsec=frontcover&dq=https&hl=&cd=9&source=gbs_api",
+        "infoLink": "http://books.google.com.tr/books?id=cy73DwAAQBAJ&dq=https&hl=&source=gbs_api",
+        "canonicalVolumeLink": "https://books.google.com/books/about/List_of_English_translated_Chinese_stand.html?hl=&id=cy73DwAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "TR",
+        "saleability": "NOT_FOR_SALE",
+        "isEbook": false
+      },
+      "accessInfo": {
+        "country": "TR",
+        "viewability": "ALL_PAGES",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": true,
+          "acsTokenLink": "http://books.google.com.tr/books/download/List_of_English_translated_Chinese_stand-sample-pdf.acsm?id=cy73DwAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=cy73DwAAQBAJ&hl=&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "HTTPS://WWW.CODEOFCHINA.COM EMAIL:COC@CODEOFCHINA.COM &quot;Codeofchina Inc., a part of TransForyou (Beijing) Translation Co., Ltd., is a professional Chinese code translator in China."
+      }
+    },
+    {
+      "kind": "books#volume",
+      "id": "0hzVAwAAQBAJ",
+      "etag": "iDoT9U0PaPQ",
+      "selfLink": "https://www.googleapis.com/books/v1/volumes/0hzVAwAAQBAJ",
+      "volumeInfo": {
+        "title": "DL; DL/T; DLT - Product Catalog. Translated English of Chinese Standard. (DL; DL/T; DLT)",
+        "subtitle": "Product catalog - China Industry Standard - Electricity & Power: DL; DL/T; DLT",
+        "authors": [
+          "https://www.chinesestandard.net"
+        ],
+        "publisher": "https://www.chinesestandard.net",
+        "publishedDate": "2018-01-01",
+        "description": "This document provides the comprehensive list of Chinese Industry Standards - Category: DL; DL/T; DLT.",
+        "readingModes": {
+          "text": false,
+          "image": true
+        },
+        "pageCount": 157,
+        "printType": "BOOK",
+        "categories": [
+          "Technology & Engineering"
+        ],
+        "averageRating": 5,
+        "ratingsCount": 1,
+        "maturityRating": "NOT_MATURE",
+        "allowAnonLogging": false,
+        "contentVersion": "6.24.21.0.preview.1",
+        "panelizationSummary": {
+          "containsEpubBubbles": false,
+          "containsImageBubbles": false
+        },
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=0hzVAwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=0hzVAwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        },
+        "language": "en",
+        "previewLink": "http://books.google.com.tr/books?id=0hzVAwAAQBAJ&printsec=frontcover&dq=https&hl=&cd=10&source=gbs_api",
+        "infoLink": "https://play.google.com/store/books/details?id=0hzVAwAAQBAJ&source=gbs_api",
+        "canonicalVolumeLink": "https://play.google.com/store/books/details?id=0hzVAwAAQBAJ"
+      },
+      "saleInfo": {
+        "country": "TR",
+        "saleability": "FOR_SALE",
+        "isEbook": true,
+        "listPrice": {
+          "amount": 907.08,
+          "currencyCode": "TRY"
+        },
+        "retailPrice": {
+          "amount": 907.08,
+          "currencyCode": "TRY"
+        },
+        "buyLink": "https://play.google.com/store/books/details?id=0hzVAwAAQBAJ&rdid=book-0hzVAwAAQBAJ&rdot=1&source=gbs_api",
+        "offers": [
+          {
+            "finskyOfferType": 1,
+            "listPrice": {
+              "amountInMicros": 907080000,
+              "currencyCode": "TRY"
+            },
+            "retailPrice": {
+              "amountInMicros": 907080000,
+              "currencyCode": "TRY"
+            }
+          }
+        ]
+      },
+      "accessInfo": {
+        "country": "TR",
+        "viewability": "PARTIAL",
+        "embeddable": true,
+        "publicDomain": false,
+        "textToSpeechPermission": "ALLOWED",
+        "epub": {
+          "isAvailable": false
+        },
+        "pdf": {
+          "isAvailable": true
+        },
+        "webReaderLink": "http://play.google.com/books/reader?id=0hzVAwAAQBAJ&hl=&source=gbs_api",
+        "accessViewStatus": "SAMPLE",
+        "quoteSharingAllowed": false
+      },
+      "searchInfo": {
+        "textSnippet": "This document provides the comprehensive list of Chinese Industry Standards - Category: DL; DL/T; DLT."
+      }
+    }
+  ]
+}
