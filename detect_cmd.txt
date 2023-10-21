@@ -1,0 +1,4 @@
+#!\bin\bash
+python demo.py --config-file configs\Detic_LCOCOI21k_CLIP_SwinB_896b32_4x_ft4x_max-size.yaml --input runs\input\orange.jpeg --output runs\output\orange_detic.jpeg --vocabulary lvis --opts MODEL.WEIGHTS models\Detic_LCOCOI21k_CLIP_SwinB_896b32_4x_ft4x_max-size.pth 
+
+# --webcam 0
