@@ -43,8 +43,8 @@ class FileStorage {
   Future<Map> readFile() async {
     try {
       // Read the file
-      var urlLocal = Uri.http('https://raw.githubusercontent.com',
-          '/darkquesh/s-f/main/run_log.json');
+      var urlLocal = Uri.https(
+          'raw.githubusercontent.com', '/darkquesh/s-f/main/run_log.json');
 
       // Await the http get response, then decode the json-formatted response.
       var response = await http.get(urlLocal);
