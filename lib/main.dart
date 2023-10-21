@@ -43,8 +43,7 @@ class FileStorage {
   Future<Map> readFile() async {
     try {
       // Read the file
-      var urlLocal = Uri.https(
-          'raw.githubusercontent.com', '/darkquesh/s-f/main/run_log.json');
+      var urlLocal = Uri.http('193.122.2.3', '/uploads/run_log.json');
 
       // Await the http get response, then decode the json-formatted response.
       var response = await http.get(urlLocal);
@@ -136,7 +135,7 @@ class FlutterDemoState extends State<FlutterDemo> {
                     topRight: Radius.circular(8.0),
                   ),
                   child: Image.network(
-                    'https://raw.githubusercontent.com/darkquesh/s-f/main/orange_detic1.jpg',
+                    'http://193.122.2.3/uploads/out.jpg',
                     fit: BoxFit.contain, // Adjust the width as needed
                     width: 200,
                     height: 200,
