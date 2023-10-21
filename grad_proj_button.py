@@ -30,13 +30,13 @@ time.sleep(2)
 
 # Select VGA 640x480 resolution
 select = Select(driver.find_element("xpath" ,"//select[@id='framesize']"))
-select.select_by_value("8")
+select.select_by_value("13")
 time.sleep(0.5)
 
-# Increase gain ceiling (exposure)
-en = driver.find_element("xpath" ,"//input[@id='gainceiling']")
-move = ActionChains(driver)
-move.click_and_hold(en).move_by_offset(4, 0).release().perform()
+# Increase gain ceiling (exposure) - better to use it under good light conditions
+#en = driver.find_element("xpath" ,"//input[@id='gainceiling']")
+#move = ActionChains(driver)
+#move.click_and_hold(en).move_by_offset(4, 0).release().perform()
 time.sleep(0.5)
 
 # Turn on the flash
