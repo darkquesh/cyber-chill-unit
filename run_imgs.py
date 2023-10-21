@@ -18,20 +18,25 @@ def run_imgs(main_dir: str, input_dir: str, output_dir: str, file_extension: str
     # iterate through all the files in the input directory
     for i, filename in enumerate(sorted(os.listdir(input_dir), key=lambda f: (''.join(filter(str.isdigit, f))))):
         #print(i+1, filename)
+        
         is_file = filename.endswith(file_extension)
-        print("Entered for loop", is_file)
+
+        if i==1:
+            print("\nDetecting objects...")
         
         if is_file:
             # set the input and output file paths
-            print(f"Inside if!, main_dir={main_dir}")
+            #print(f"Inside if!, main_dir={main_dir}")
             input_file = os.path.join(input_dir, filename)
-            print(input_file)
+            #print(input_file)
             output_file = os.path.join(output_dir, "{}_detic{}.jpg".format(Path(filename).stem, i+1))
-            print(output_file)
+            #print(output_file)
 
             # execute the command with the input and output file paths
             os.system("{} --input {} --output {} {}".format(command1, input_file, output_file, command2))
-            print("If iteration:", i)
+            #print("If iteration:", i)
+    
+    print("\nObject detection is done!\n")
 
 if __name__ == "__main__":
     main_dir = "C:\\Users\\erenk\\OneDrive\\Desktop\\eren\\ELE401_402\\Detic\\Detic\\"
