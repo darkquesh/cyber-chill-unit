@@ -25,7 +25,7 @@ driver.get(cam_server)
 
 # Maximize the window and let code stall 
 # for 2s to properly maximise the window.
-#driver.maximize_window()
+driver.maximize_window()
 time.sleep(2)
 
 # Select VGA 640x480 resolution
@@ -37,9 +37,23 @@ time.sleep(0.5)
 en = driver.find_element("xpath" ,"//input[@id='gainceiling']")
 move = ActionChains(driver)
 move.click_and_hold(en).move_by_offset(4, 0).release().perform()
-time.sleep(1)
+time.sleep(0.5)
+
+# Turn on the flash
+try:
+    # Flash intensity slide is located near the bottom of the screen, so scroll to the bottom
+    driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+
+    flash_on = driver.find_element("xpath" ,"//input[@id='led_intensity']")
+    move2 = ActionChains(driver)
+    move2.move_to_element(flash_on).perform()
+    move2.click_and_hold(flash_on).move_by_offset(200, 0).release().perform()
+except:
+    pass
+time.sleep(0.5)
 
 # Get the image
+driver.execute_script("window.scrollTo(0, -document.body.scrollHeight);")
 image_url = f'{cam_server}/capture'
 img_data = requests.get(image_url).content
 
@@ -50,6 +64,26 @@ except OSError as error:
 
 with open('ESP32/image2.jpg', 'wb') as handler:
     handler.write(img_data)
+    print("Image captured!")
+
+time.sleep(1)
+
+# Turn off the flash
+try:
+    driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+    flash_off = driver.find_element("xpath" ,"//input[@id='led_intensity']")
+    move2 = ActionChains(driver)
+    move2.move_to_element(flash_on).perform()
+    move2.click_and_hold(flash_off).move_by_offset(-200, 0).release().perform()
+except:
+    pass
+
+driver.execute_script("window.scrollTo(0, -document.body.scrollHeight);")
+time.sleep(0.5)
+
+# Close the driver
+driver.close()
+time.sleep(1)
 
 ###
 ###
