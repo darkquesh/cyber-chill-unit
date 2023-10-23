@@ -5,19 +5,19 @@
 //import 'package:flutter/services.dart' show rootBundle;
 
 import 'dart:async';
-import 'dart:convert' as convert;
-import 'package:detic_app2/api/local_notifications.dart';
 import 'package:flutter/material.dart';
+import 'dart:convert' as convert;
 import 'package:http/http.dart' as http;
-//import 'package:path_provider/path_provider.dart';
+import 'package:detic_app2/api/local_notifications.dart';
+import 'package:timezone/data/latest.dart' as tz;
 
 final navigatorKey = GlobalKey<NavigatorState>();
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  NotificationService().initNotification();
   //await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   //await FirebaseApi().initNotifications();
-  NotificationService().initNotification();
 
   runApp(
     MaterialApp(
@@ -75,6 +75,8 @@ class FileStorage {
   }
 }
 
+DateTime scheduleTime = DateTime.now();
+
 class FlutterDemo extends StatefulWidget {
   const FlutterDemo({super.key, required this.storage});
 
@@ -94,6 +96,7 @@ class FlutterDemoState extends State<FlutterDemo> {
   @override
   void initState() {
     super.initState();
+    tz.initializeTimeZones();
 
     widget.storage.readFile().then((str) {
       setState(() {
@@ -103,15 +106,6 @@ class FlutterDemoState extends State<FlutterDemo> {
         //counter = value;
       });
     });
-  }
-
-  void _incrementCounter() {
-    setState(() {
-      counter++;
-    });
-    //print(counter);
-    // Write the variable as a string to the file.
-    //return widget.storage.writeFile(counter);
   }
 
   @override
@@ -136,7 +130,7 @@ class FlutterDemoState extends State<FlutterDemo> {
                     topRight: Radius.circular(8.0),
                   ),
                   child: Image.network(
-                    'https://raw.githubusercontent.com/darkquesh/s-f/main/apple1.jpg',
+                    'https://raw.githubusercontent.com/darkquesh/s-f/main/orange_detic1.jpg',
                     fit: BoxFit.contain, // Adjust the width as needed
                     width: 200,
                     height: 200,
@@ -174,20 +168,20 @@ class FlutterDemoState extends State<FlutterDemo> {
               ],
             ),
           ),
-          //   child: Text('Objects:\n'
-          //       '$data'
-          //       //'Button tapped $counter time${counter == 1 ? '' : 's'}.',
-          //       ),
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {
-            NotificationService().showNotification(
-              title:
-                  'Attention: Your ${objects[0]} are plotting a sticky revolution',
-              body:
-                  'Either make ${objects[0]} bread or face the consequences of mushy anarchy!',
-            );
+            NotificationService().scheduleNotification(
+                title: 'Scheduled Notification',
+                body: '$scheduleTime',
+                scheduledNotificationDateTime: scheduleTime);
             print('Button pressed!');
+            //NotificationService().showNotification(
+            //  title:
+            //      'Attention: Your ${objects[0]} are plotting a sticky revolution',
+            //  body:
+            //      'Either make ${objects[0]} bread or face the consequences of mushy anarchy!',
+            //);
           },
           //onPressed: _incrementCounter,
           tooltip: 'Send notification',
