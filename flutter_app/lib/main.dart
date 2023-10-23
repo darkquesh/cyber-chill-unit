@@ -12,6 +12,9 @@ import 'package:detic_app2/api/local_notifications.dart';
 import 'package:timezone/data/latest.dart' as tz;
 
 final navigatorKey = GlobalKey<NavigatorState>();
+const serverIP = "51.20.72.77";
+const jsonFile = "/uploads/json_files/run_log.json";
+const imageFile = "/uploads/raw_images/orange.jpg";
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -43,8 +46,7 @@ class FileStorage {
   Future<Map> readFile() async {
     try {
       // Read the file
-      var urlLocal = Uri.https(
-          'raw.githubusercontent.com', '/darkquesh/s-f/main/run_log.json');
+      var urlLocal = Uri.http(serverIP, jsonFile);
 
       // Await the http get response, then decode the json-formatted response.
       var response = await http.get(urlLocal);
@@ -130,7 +132,7 @@ class FlutterDemoState extends State<FlutterDemo> {
                     topRight: Radius.circular(8.0),
                   ),
                   child: Image.network(
-                    'https://raw.githubusercontent.com/darkquesh/s-f/main/orange_detic1.jpg',
+                    'http://$serverIP$imageFile',
                     fit: BoxFit.contain, // Adjust the width as needed
                     width: 200,
                     height: 200,
