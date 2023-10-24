@@ -7,36 +7,36 @@ import requests
 import os
 
 from run_imgs import run_imgs
+from uploadFiles import uploadFile
 
 main_dir = "C:\\Users\\erenk\\OneDrive\\Desktop\\eren\\ELE401_402\\Detic\\Detic\\"
-os.chdir(main_dir) # Windows
+os.chdir(main_dir)                                  # Windows
 #os.chdir("/home/nitro/Desktop/image_proc/Detic/")  # Linux
   
 # Create the webdriver object. Here the 
-# chromedriver is present in the driver 
+# firefoxdriver is present in the driver 
 # folder of the root directory.
 driver = webdriver.Firefox()
   
 # Camera web server - change it accordingly!
-cam_server = "http://192.168.1.26"
+cam_server = "http://192.168.1.30"
 
 # Get webpage
 driver.get(cam_server)
 
-# Maximize the window and let code stall 
-# for 2s to properly maximise the window.
+# Maximize the window and let code stall for 2s to properly maximise the window.
 driver.maximize_window()
 time.sleep(2)
 
-# Select VGA 640x480 resolution
+# Select (8 - VGA 640x480 | 13 - UXGA 1600x1200 highest) resolution
 select = Select(driver.find_element("xpath" ,"//select[@id='framesize']"))
 select.select_by_value("13")
 time.sleep(0.5)
 
 # Increase gain ceiling (exposure) - better to use it under good light conditions
-#en = driver.find_element("xpath" ,"//input[@id='gainceiling']")
-#move = ActionChains(driver)
-#move.click_and_hold(en).move_by_offset(4, 0).release().perform()
+en = driver.find_element("xpath" ,"//input[@id='gainceiling']")
+move = ActionChains(driver)
+move.click_and_hold(en).move_by_offset(4, 0).release().perform()
 time.sleep(0.5)
 
 # Turn on the flash
@@ -48,9 +48,9 @@ try:
     move2 = ActionChains(driver)
     move2.move_to_element(flash_on).perform()
     move2.click_and_hold(flash_on).move_by_offset(200, 0).release().perform()
+    time.sleep(0.5)
 except:
     pass
-time.sleep(0.5)
 
 # Get the image
 driver.execute_script("window.scrollTo(0, -document.body.scrollHeight);")
@@ -85,12 +85,10 @@ time.sleep(0.5)
 driver.close()
 time.sleep(1)
 
-###
-###
-###
 
-# Change the directory according to your machine (though it must be in your Detic directory)
-#os.chdir("/home/nitro/Desktop/image_proc/Detic/")
+###############################################
+### Detic object detection and segmentation ###
+###############################################
 
 # set the input and output directories
 input_dir = "ESP32\\"
@@ -102,7 +100,31 @@ try:
 except OSError as error:  
     print(error)
 
-run_imgs(main_dir, input_dir, output_dir, file_extension)
+Status = 1
+input_file = ''
+output_file = ''
+json_file = ''
+
+Status, input_file, output_file, json_file = run_imgs(main_dir, input_dir, output_dir, file_extension)
+
+if Status == 1:
+    print("Object detection error!")
+
+
+##############################
+### Upload files to server ###
+##############################
+else:
+    srv_url = 'http://51.20.72.77/php-scripts/upload.php'
+
+    param = '--raw'
+    uploadFile(srv_url, input_file, param)
+
+    param = '--out'
+    uploadFile(srv_url, output_file, param)
+
+    param = '--json'
+    uploadFile(srv_url, json_file, param)
 
 
 '''  
