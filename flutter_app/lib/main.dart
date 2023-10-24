@@ -14,7 +14,7 @@ import 'package:timezone/data/latest.dart' as tz;
 final navigatorKey = GlobalKey<NavigatorState>();
 const serverIP = "51.20.72.77";
 const jsonFile = "/uploads/json_files/run_log.json";
-const imageFile = "/uploads/raw_images/orange.jpg";
+const imageFile = "/uploads/out_images/image2_detic2.jpg";
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -131,14 +131,21 @@ class FlutterDemoState extends State<FlutterDemo> {
                     topLeft: Radius.circular(8.0),
                     topRight: Radius.circular(8.0),
                   ),
-                  child: Image.network(
-                    'http://$serverIP$imageFile',
-                    fit: BoxFit.contain, // Adjust the width as needed
-                    width: 200,
-                    height: 200,
+                  child: InteractiveViewer(
+                    panEnabled: true, // Set it to false
+                    boundaryMargin: EdgeInsets.all(100),
+                    minScale: 1,
+                    maxScale: 2,
+                    alignment: Alignment.center,
+                    child: Image.network(
+                      'http://$serverIP$imageFile',
+                      fit: BoxFit.contain, // Adjust the width as needed
+                      width: 300,
+                      height: 300,
+                    ),
                   ),
                 ),
-                SizedBox(height: 16), // Add spacing between image and text
+                SizedBox(height: 10), // Add spacing between image and text
                 Text(
                   'Detected $itemCount objects:\n',
                   style: TextStyle(
@@ -149,7 +156,8 @@ class FlutterDemoState extends State<FlutterDemo> {
                 ListView.separated(
                   shrinkWrap: true,
                   padding: const EdgeInsets.all(10),
-                  itemCount: data.length,
+                  physics: const NeverScrollableScrollPhysics(),
+                  itemCount: itemCount,
                   itemBuilder: (context, index) {
                     return ListTile(
                       shape: RoundedRectangleBorder(
