@@ -15,6 +15,9 @@ def run_imgs(main_dir: str, input_dir: str, output_dir: str, file_extension: str
     #input_dir = "runs\input"
     #output_dir = "runs\output"
 
+    # If Status = 0, detection is successful; 1 if fails
+    Status = 1
+
     # iterate through all the files in the input directory
     for i, filename in enumerate(sorted(os.listdir(input_dir), key=lambda f: (''.join(filter(str.isdigit, f))))):
         #print(i+1, filename)
@@ -35,8 +38,17 @@ def run_imgs(main_dir: str, input_dir: str, output_dir: str, file_extension: str
             # execute the command with the input and output file paths
             os.system("{} --input {} --output {} {}".format(command1, input_file, output_file, command2))
             #print("If iteration:", i)
+            Status = 0
+
+        else:
+            Status = 1
     
-    print("\nObject detection is done!\n")
+    if Status == 0:
+        print("\nObject detection is done!\n")
+
+    json_file = f'{main_dir}\\run_log.json'
+
+    return Status, input_file, output_file, json_file
 
 if __name__ == "__main__":
     main_dir = "C:\\Users\\erenk\\OneDrive\\Desktop\\eren\\ELE401_402\\Detic\\Detic\\"
