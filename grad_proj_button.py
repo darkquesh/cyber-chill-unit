@@ -6,8 +6,14 @@ import time
 import requests
 import os
 
+# For displaying raw and processed images
+import matplotlib.pyplot as plt
+import matplotlib.image as mpimg
+from matplotlib import rcParams
+
 from run_imgs import run_imgs
 from uploadFiles import uploadFile
+from query_yes_no import query_yes_no
 
 main_dir = "C:\\Users\\erenk\\OneDrive\\Desktop\\eren\\ELE401_402\\Detic\\Detic\\"
 os.chdir(main_dir)                                  # Windows
@@ -110,21 +116,39 @@ Status, input_file, output_file, json_file = run_imgs(main_dir, input_dir, outpu
 if Status == 1:
     print("Object detection error!")
 
+else:
+    # figure size in inches optional
+    #rcParams['figure.figsize'] = 11, 8
+
+    # read images
+    raw_img = mpimg.imread(input_file)
+    proc_img = mpimg.imread(output_file)
+
+    # display images
+    fig, ax = plt.subplots(1,2)
+    ax[0].imshow(raw_img)
+    ax[1].imshow(proc_img)
+    plt.show(block=False)
+    plt.pause(3)
+    plt.close()
 
 ##############################
 ### Upload files to server ###
 ##############################
-else:
-    srv_url = 'http://51.20.72.77/php-scripts/upload.php'
+    uploadOn = True
+    uploadOn = query_yes_no('Would you like to upload files to the server?')
 
-    param = '--raw'
-    uploadFile(srv_url, input_file, param)
+    if uploadOn == True:
+        srv_url = 'http://51.20.72.77/php-scripts/upload.php'
 
-    param = '--out'
-    uploadFile(srv_url, output_file, param)
+        param = '--raw'
+        uploadFile(srv_url, input_file, param)
 
-    param = '--json'
-    uploadFile(srv_url, json_file, param)
+        param = '--out'
+        uploadFile(srv_url, output_file, param)
+
+        param = '--json'
+        uploadFile(srv_url, json_file, param)
 
 
 '''  
