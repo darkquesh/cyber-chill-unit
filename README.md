@@ -1,6 +1,13 @@
 # Smart Fridge to Quantise Food Decay
 
 Graduation project - Fall 23/24
+  
+## How to setup
+
+    mkdir cyber_chill
+    cd cyber_chill
+    git clone https://github.com/darkquesh/cyber-chill-unit.git
+    git clone https://github.com/darkquesh/Detic
 
 ## Tools and Environments Used
 
