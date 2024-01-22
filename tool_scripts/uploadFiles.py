@@ -9,7 +9,7 @@ def uploadFile(srv_url: str, filename: str, param: str):
     print(response.text)
 
 if __name__ == "__main__":
-    srv_url = 'http://51.20.72.77/php-scripts/upload.php'  # Replace with your server's URL
+    srv_url = 'http://*****/php-scripts/upload.php'  # Replace with your server's URL
     filename = 'orange.jpg'
     param = '--raw'
 
