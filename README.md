@@ -33,3 +33,5 @@ Graduation project - Fall 23/24
 - darkquesh. (n.d.). darkquesh/Detic: Code release for “detecting Twenty-thousand classes using image-level supervision”. GitHub. <https://github.com/darkquesh/Detic>
 
 - canatess. (n.d.). canatess/Smart-Fridge. GitHub. <https://github.com/canatess/smart-fridge>
+
+- Santos, R. (2023, March 27). ESP32-cam HTTP POST images/photos to server. Random Nerd Tutorials. <https://randomnerdtutorials.com/esp32-cam-post-image-photo-server/>
