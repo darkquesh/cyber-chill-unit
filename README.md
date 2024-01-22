@@ -7,7 +7,7 @@ Graduation project - Fall 23/24
     mkdir cyber_chill
     cd cyber_chill
     git clone https://github.com/darkquesh/cyber-chill-unit.git
-    git clone https://github.com/darkquesh/Detic
+    git clone https://github.com/darkquesh/Detic.git
 
 ## Tools and Environments Used
 
