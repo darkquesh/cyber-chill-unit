@@ -3,13 +3,22 @@
 import os
 from pathlib import Path
 
+def beep():
+    print("\a")
+
 def run_imgs(main_dir: str, input_dir: str, output_dir: str, file_extension: str = ".jpeg"):
     # Change the directory according to your machine (though it must be in your Detic directory)
     os.chdir(main_dir)
+    #model = f"Detic_LCOCOI21k_CLIP_SwinB_896b32_4x_ft4x_max-size"
+    #model = f"Detic_LbaseI_CLIP_SwinB_896b32_4x_ft4x_max-size"  # Second best
+    #model = f"BoxSup-C2_Lbase_CLIP_SwinB_896b32_4x"
+    #model = f"BoxSup-C2_L_CLIP_SwinB_896b32_4x"
+    model = f"Detic_LI_CLIP_SwinB_896b32_4x_ft4x_max-size" # Truly the BEST ONE
+    #config = f"Detic_LI_CLIP_SwinB_896b32_4x_ft4x_max-size"
 
     # set the command to execute
-    command1 = "python3 demo.py --config-file configs\Detic_LCOCOI21k_CLIP_SwinB_896b32_4x_ft4x_max-size.yaml"
-    command2 =  "--vocabulary lvis --opts MODEL.WEIGHTS models\Detic_LCOCOI21k_CLIP_SwinB_896b32_4x_ft4x_max-size.pth"
+    command1 = f"python3 demo.py --config-file configs\{model}.yaml"
+    command2 =  f"--opts MODEL.WEIGHTS models\{model}.pth"      #--vocabulary lvis 
 
     # set the input and output directories
     #input_dir = "runs\input"
@@ -22,7 +31,7 @@ def run_imgs(main_dir: str, input_dir: str, output_dir: str, file_extension: str
     for i, filename in enumerate(sorted(os.listdir(input_dir), key=lambda f: (''.join(filter(str.isdigit, f))))):
         #print(i+1, filename)
         
-        is_file = filename.endswith(file_extension)
+        is_file = filename.endswith((file_extension, file_extension.upper()))
 
         if i==1:
             print("\nDetecting objects...")
@@ -52,8 +61,12 @@ def run_imgs(main_dir: str, input_dir: str, output_dir: str, file_extension: str
 
 if __name__ == "__main__":
     main_dir = "C:\\Users\\erenk\\OneDrive\\Desktop\\eren\\ELE401_402\\Detic\\Detic\\"
-    input_dir = "runs\input"
-    output_dir = "runs\output"
-    file_extension = ".jpeg"
+    #input_dir = "runs\input"
+    #output_dir = "runs\output"
+
+    input_dir = "C:\\Users\\erenk\\OneDrive\\Desktop\\eren\\ELE401_402\\mold_model_train\\peach"
+    output_dir = "C:\\Users\\erenk\\OneDrive\\Desktop\\eren\\ELE401_402\\mold_model_train\\peach\\detic"
+    file_extension = ".jpg"
     
     run_imgs(main_dir, input_dir, output_dir, file_extension)
+    beep()  # Alert when done

@@ -18,7 +18,7 @@ from query_yes_no import query_yes_no
 main_dir = "C:\\Users\\erenk\\OneDrive\\Desktop\\eren\\ELE401_402\\Detic\\Detic\\"
 os.chdir(main_dir)                                  # Windows
 #os.chdir("/home/nitro/Desktop/image_proc/Detic/")  # Linux
-  
+'''
 # Create the webdriver object. Here the 
 # firefoxdriver is present in the driver 
 # folder of the root directory.
@@ -90,7 +90,7 @@ time.sleep(0.5)
 # Close the driver
 driver.close()
 time.sleep(1)
-
+'''
 
 ###############################################
 ### Detic object detection and segmentation ###
@@ -136,10 +136,10 @@ else:
 ### Upload files to server ###
 ##############################
     uploadOn = True
-    uploadOn = query_yes_no('Would you like to upload files to the server?')
+    #uploadOn = query_yes_no('Would you like to upload files to the server?')
 
     if uploadOn == True:
-        srv_url = 'http://51.20.72.77/php-scripts/upload.php'
+        srv_url = 'http://34.16.166.121/php-scripts/upload.php'
 
         param = '--raw'
         uploadFile(srv_url, input_file, param)

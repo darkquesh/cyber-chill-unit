@@ -10,11 +10,13 @@ import 'dart:convert' as convert;
 import 'package:http/http.dart' as http;
 import 'package:detic_app2/api/local_notifications.dart';
 import 'package:timezone/data/latest.dart' as tz;
+import 'package:restart_app/restart_app.dart';
 
 final navigatorKey = GlobalKey<NavigatorState>();
-const serverIP = "51.20.72.77";
-const jsonFile = "/uploads/json_files/run_log.json";
-const imageFile = "/uploads/out_images/image2_detic2.jpg";
+const serverIP = "192.168.99.104"; //serverIP = "34.125.172.217";
+//var jsonFile = "/detic-runs/esp32-cam.json";
+//var imageFile = "/detic-runs/esp32-cam.jpg";
+//var latestFileName = "";
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -37,14 +39,43 @@ void main() async {
         //  iconColor: Colors.white,
         //),
       ),
-      home: FlutterDemo(storage: FileStorage()),
+      home: DeticApp(storage: FileStorage()),
     ),
   );
 }
 
 class FileStorage {
+  Future<String> readPHP() async {
+    try {
+      // Await phpScript response
+      var phpScriptUrl = "http://$serverIP/php-scripts/latestfile.php";
+      var phpScriptResponse = await http.get(Uri.parse(phpScriptUrl));
+      dynamic latestFileName;
+
+      if (phpScriptResponse.statusCode == 200) {
+        var phpResponseData = convert.jsonDecode(phpScriptResponse.body);
+        latestFileName = phpResponseData['latestFile'];
+        print('Latest file name: $latestFileName');
+      } else {
+        print(
+            'Failed to load data. Status code: ${phpScriptResponse.statusCode}');
+      }
+
+      return latestFileName;
+    } catch (e) {
+      print('Error: $e');
+      return "";
+    }
+  }
+
   Future<Map> readFile() async {
     try {
+      String latestFileName = await readPHP();
+      print(latestFileName);
+      var jsonFile = "/detic-runs/$latestFileName.json";
+      print(jsonFile);
+      //imageFile = "/detic-runs/$latestFileName.jpg";
+
       // Read the file
       var urlLocal = Uri.http(serverIP, jsonFile);
 
@@ -55,13 +86,21 @@ class FileStorage {
 
       Map<dynamic, dynamic> jsonResponse = {};
 
-      var itemCount = 0;
+      var itemCount, uniqueObjects = 0;
       if (response.statusCode == 200) {
         jsonResponse = convert.jsonDecode(response.body);
-        itemCount = jsonResponse['totalItems'];
+        //itemCount = jsonResponse['totalItems'];
+        uniqueObjects = jsonResponse['uniqueObjects'];
+        itemCount = uniqueObjects;
+        Map<String, dynamic> objects = jsonResponse['objects'];
 
         print(jsonResponse);
         print('Item count in the detected picture: $itemCount.');
+        print('Unique objects in the detected picture: $uniqueObjects.');
+        print('Objects:');
+        objects.forEach((key, value) {
+          print('$key: $value');
+        });
       } else {
         print('Request failed with status: ${response.statusCode}.');
       }
@@ -79,21 +118,22 @@ class FileStorage {
 
 DateTime scheduleTime = DateTime.now();
 
-class FlutterDemo extends StatefulWidget {
-  const FlutterDemo({super.key, required this.storage});
+class DeticApp extends StatefulWidget {
+  const DeticApp({super.key, required this.storage});
 
   final FileStorage storage;
 
   @override
-  State<FlutterDemo> createState() => FlutterDemoState();
+  State<DeticApp> createState() => DeticAppState();
 }
 
-class FlutterDemoState extends State<FlutterDemo> {
-  int counter = 0;
-  //int data = 1;
+class DeticAppState extends State<DeticApp> {
   var data = {};
-  List objects = [];
+  Map<String, dynamic> objects = {};
   int itemCount = 0;
+  int uniqueObjects = 0;
+  var latestFileName = "";
+  var imageFile = "";
 
   @override
   void initState() {
@@ -105,7 +145,15 @@ class FlutterDemoState extends State<FlutterDemo> {
         data = str;
         objects = data['objects'];
         itemCount = data['totalItems'];
-        //counter = value;
+        uniqueObjects = data['uniqueObjects'];
+      });
+    });
+
+    widget.storage.readPHP().then((filename) {
+      setState(() {
+        latestFileName = filename;
+        imageFile = "/detic-runs/$latestFileName.jpg";
+        print(imageFile);
       });
     });
   }
@@ -157,7 +205,7 @@ class FlutterDemoState extends State<FlutterDemo> {
                   shrinkWrap: true,
                   padding: const EdgeInsets.all(10),
                   physics: const NeverScrollableScrollPhysics(),
-                  itemCount: itemCount,
+                  itemCount: uniqueObjects,
                   itemBuilder: (context, index) {
                     return ListTile(
                       shape: RoundedRectangleBorder(
@@ -166,8 +214,10 @@ class FlutterDemoState extends State<FlutterDemo> {
                       textColor: theme.colorScheme.onPrimary,
                       iconColor: theme.colorScheme.onPrimary,
                       leading: const Icon(Icons.restaurant),
-                      title: Text(data.values.toList()[1][index]),
-                      trailing: Text(""),
+                      title: Text(data["objects"].keys.toList()[
+                          index]), //Text(data.values.toList()[1][index]),
+                      trailing: Text(
+                          data["objects"].values.toList()[index].toString()),
                     );
                     //child: Text(data.values.toList()[1][index]));
                   },
@@ -182,10 +232,11 @@ class FlutterDemoState extends State<FlutterDemo> {
         floatingActionButton: FloatingActionButton(
           onPressed: () {
             NotificationService().scheduleNotification(
-                title: 'Scheduled Notification',
-                body: '$scheduleTime',
+                title: 'Detected',
+                body: '$itemCount objects!',
                 scheduledNotificationDateTime: scheduleTime);
             print('Button pressed!');
+            Restart.restartApp();
             //NotificationService().showNotification(
             //  title:
             //      'Attention: Your ${objects[0]} are plotting a sticky revolution',
@@ -193,7 +244,6 @@ class FlutterDemoState extends State<FlutterDemo> {
             //      'Either make ${objects[0]} bread or face the consequences of mushy anarchy!',
             //);
           },
-          //onPressed: _incrementCounter,
           tooltip: 'Send notification',
           child: const Icon(Icons.rocket),
         ),
