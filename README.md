@@ -1,13 +1,28 @@
 # Smart Fridge to Quantise Food Decay
 
-Graduation project  
+Graduation project - Fall 23/24
 
-### Tools and Environments Used
+## Tools and Environments Used
 
-- Microcontroller
-    - ESP32-CAM (with OV2640 camera)
-- Object Detection (Image classification and segmentation)
-    - PyTorch
-    - Detic
+- Development Board
+  - ESP32-CAM (with OV2640 camera)
+- Machine Learning (object detection and segmentation)
+  - PyTorch
+  - Detic
 - App Development
-    - Flutter
+  - Flutter, Dart
+  - Android Studio
+- Web Development
+  - Apache
+  - Google Cloud Platform
+  - Ubuntu Linux virtual machine
+
+<p align="center">
+  <img src="./assets/cyber_chill_unit.png" alt="project_overview" width="400"/>
+</p>
+
+## References
+
+- darkquesh. (n.d.). darkquesh/Detic: Code release for “detecting Twenty-thousand classes using image-level supervision”. GitHub. <https://github.com/darkquesh/Detic>
+
+- canatess. (n.d.). canatess/Smart-Fridge. GitHub. <https://github.com/canatess/smart-fridge>
