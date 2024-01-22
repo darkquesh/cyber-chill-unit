@@ -13,7 +13,7 @@ import 'package:timezone/data/latest.dart' as tz;
 import 'package:restart_app/restart_app.dart';
 
 final navigatorKey = GlobalKey<NavigatorState>();
-const serverIP = "192.168.99.104"; //serverIP = "34.125.172.217";
+const serverIP = "192.168.99.104";
 //var jsonFile = "/detic-runs/esp32-cam.json";
 //var imageFile = "/detic-runs/esp32-cam.jpg";
 //var latestFileName = "";
