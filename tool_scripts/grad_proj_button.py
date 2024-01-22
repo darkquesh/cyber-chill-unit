@@ -139,7 +139,7 @@ else:
     #uploadOn = query_yes_no('Would you like to upload files to the server?')
 
     if uploadOn == True:
-        srv_url = 'http://34.16.166.121/php-scripts/upload.php'
+        srv_url = 'http://****/php-scripts/upload.php'
 
         param = '--raw'
         uploadFile(srv_url, input_file, param)
